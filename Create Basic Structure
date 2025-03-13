@@ -1,0 +1,9 @@
+/User InformationApp
+├── /src
+│   ├── /components
+│   │   └── UserCard.js
+│   ├── /screens
+│   │   ├── UserScreen.js
+│   │   └── HomeScreen.js
+│   └── App.js
+└── package.json
