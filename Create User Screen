@@ -1,0 +1,35 @@
+In User Screen.js, display user information :
+import React from 'react';
+import { View, Text, Image, StyleSheet } from 'react-native';
+
+const UserScreen = ({ route }) => {
+  const { user } = route.params;
+
+  return (
+    <View style={styles.container}>
+      <Image source={{ uri: user.avatar }} style={styles.avatar} />
+      <Text>ID: {user.id}</Text>
+      <Text>UID: {user.uid}</Text>
+      <Text>Password: {user.password}</Text>
+      <Text>First Name: {user.first_name}</Text>
+      <Text>Last Name: {user.last_name}</Text>
+      <Text>Username: {user.username}</Text>
+      <Text>Email: {user.email}</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  avatar: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+  },
+});
+
+export default UserScreen;
